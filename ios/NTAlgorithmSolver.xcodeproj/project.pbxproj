@@ -16,10 +16,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* NTAlgorithmSolverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NTAlgorithmSolverTests.m */; };
-		32003CB8BFEEB5025629B156 /* libPods-NTAlgorithmSolver-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FFF2AE9337BA12BB8E7CF1 /* libPods-NTAlgorithmSolver-tvOSTests.a */; };
-		A7B76C4984A1294F55EDE2F0 /* libPods-NTAlgorithmSolver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2536FDE7EE104AC50F8232B9 /* libPods-NTAlgorithmSolver.a */; };
-		B7C3935D1518C7B778D923C9 /* libPods-NTAlgorithmSolver-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB05CDA0CD69D29A9845E6D /* libPods-NTAlgorithmSolver-tvOS.a */; };
-		D5D6D31E0222B2F588BA60A1 /* libPods-NTAlgorithmSolverTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA3B79500A66EC6E3B4C350 /* libPods-NTAlgorithmSolverTests.a */; };
+		34FF8D02CFA051C2AD604452 /* libPods-NTAlgorithmSolverTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC2D3C7CEE712D283B0C75D /* libPods-NTAlgorithmSolverTests.a */; };
+		6BA36C9FB0719E93AB503E1E /* libPods-NTAlgorithmSolver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DF97E5E79A94BAA681FD76 /* libPods-NTAlgorithmSolver.a */; };
+		C730F4DE1AA36EF8CB9D6513 /* libPods-NTAlgorithmSolver-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 361C6EF39CFF6F9ADD1BFDA2 /* libPods-NTAlgorithmSolver-tvOS.a */; };
+		F2948EF45B14C972B426F9A6 /* libPods-NTAlgorithmSolver-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CAAF3A62FB784DDC6B87C15 /* libPods-NTAlgorithmSolver-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,19 +52,19 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = NTAlgorithmSolver/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NTAlgorithmSolver/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = NTAlgorithmSolver/main.m; sourceTree = "<group>"; };
-		2536FDE7EE104AC50F8232B9 /* libPods-NTAlgorithmSolver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTAlgorithmSolver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		27FFF2AE9337BA12BB8E7CF1 /* libPods-NTAlgorithmSolver-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTAlgorithmSolver-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CAAF3A62FB784DDC6B87C15 /* libPods-NTAlgorithmSolver-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTAlgorithmSolver-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* NTAlgorithmSolver-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NTAlgorithmSolver-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* NTAlgorithmSolver-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NTAlgorithmSolver-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F39113635F6145AFD6F1140 /* Pods-NTAlgorithmSolverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTAlgorithmSolverTests.debug.xcconfig"; path = "Target Support Files/Pods-NTAlgorithmSolverTests/Pods-NTAlgorithmSolverTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2FB05CDA0CD69D29A9845E6D /* libPods-NTAlgorithmSolver-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTAlgorithmSolver-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		361C6EF39CFF6F9ADD1BFDA2 /* libPods-NTAlgorithmSolver-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTAlgorithmSolver-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4041C9F8DFFDE4DEFC3C5A26 /* Pods-NTAlgorithmSolver-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTAlgorithmSolver-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-NTAlgorithmSolver-tvOS/Pods-NTAlgorithmSolver-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		62DF97E5E79A94BAA681FD76 /* libPods-NTAlgorithmSolver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTAlgorithmSolver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DC71BCD647A98D2128C0A0 /* Pods-NTAlgorithmSolver-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTAlgorithmSolver-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NTAlgorithmSolver-tvOSTests/Pods-NTAlgorithmSolver-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AFF2A5C5DA8593721A11CFB /* Pods-NTAlgorithmSolver-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTAlgorithmSolver-tvOS.release.xcconfig"; path = "Target Support Files/Pods-NTAlgorithmSolver-tvOS/Pods-NTAlgorithmSolver-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		8DAD3B99F5806018B15C32D4 /* Pods-NTAlgorithmSolver-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTAlgorithmSolver-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-NTAlgorithmSolver-tvOSTests/Pods-NTAlgorithmSolver-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		BC910A51F2B6D2265BE8F903 /* Pods-NTAlgorithmSolverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTAlgorithmSolverTests.release.xcconfig"; path = "Target Support Files/Pods-NTAlgorithmSolverTests/Pods-NTAlgorithmSolverTests.release.xcconfig"; sourceTree = "<group>"; };
-		CCA3B79500A66EC6E3B4C350 /* libPods-NTAlgorithmSolverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTAlgorithmSolverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95D8525F41066E5A84B5B80 /* Pods-NTAlgorithmSolver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTAlgorithmSolver.release.xcconfig"; path = "Target Support Files/Pods-NTAlgorithmSolver/Pods-NTAlgorithmSolver.release.xcconfig"; sourceTree = "<group>"; };
+		DFC2D3C7CEE712D283B0C75D /* libPods-NTAlgorithmSolverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTAlgorithmSolverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D6D31E0222B2F588BA60A1 /* libPods-NTAlgorithmSolverTests.a in Frameworks */,
+				34FF8D02CFA051C2AD604452 /* libPods-NTAlgorithmSolverTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B76C4984A1294F55EDE2F0 /* libPods-NTAlgorithmSolver.a in Frameworks */,
+				6BA36C9FB0719E93AB503E1E /* libPods-NTAlgorithmSolver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7C3935D1518C7B778D923C9 /* libPods-NTAlgorithmSolver-tvOS.a in Frameworks */,
+				C730F4DE1AA36EF8CB9D6513 /* libPods-NTAlgorithmSolver-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32003CB8BFEEB5025629B156 /* libPods-NTAlgorithmSolver-tvOSTests.a in Frameworks */,
+				F2948EF45B14C972B426F9A6 /* libPods-NTAlgorithmSolver-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				2536FDE7EE104AC50F8232B9 /* libPods-NTAlgorithmSolver.a */,
-				2FB05CDA0CD69D29A9845E6D /* libPods-NTAlgorithmSolver-tvOS.a */,
-				27FFF2AE9337BA12BB8E7CF1 /* libPods-NTAlgorithmSolver-tvOSTests.a */,
-				CCA3B79500A66EC6E3B4C350 /* libPods-NTAlgorithmSolverTests.a */,
+				361C6EF39CFF6F9ADD1BFDA2 /* libPods-NTAlgorithmSolver-tvOS.a */,
+				1CAAF3A62FB784DDC6B87C15 /* libPods-NTAlgorithmSolver-tvOSTests.a */,
+				62DF97E5E79A94BAA681FD76 /* libPods-NTAlgorithmSolver.a */,
+				DFC2D3C7CEE712D283B0C75D /* libPods-NTAlgorithmSolverTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,6 +165,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D94A5056FAB22EB3CC1D40C1 /* Pods */,
+				F46E232814424EEE8A921F02 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -194,8 +195,14 @@
 				2F39113635F6145AFD6F1140 /* Pods-NTAlgorithmSolverTests.debug.xcconfig */,
 				BC910A51F2B6D2265BE8F903 /* Pods-NTAlgorithmSolverTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F46E232814424EEE8A921F02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +237,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				D30D515FC6EAB1F1D68EAAAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,12 +293,15 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 5K5U64U7T6;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -308,6 +319,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -475,6 +487,54 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D30D515FC6EAB1F1D68EAAAC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NTAlgorithmSolver/Pods-NTAlgorithmSolver-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NTAlgorithmSolver/Pods-NTAlgorithmSolver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -628,6 +688,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 5K5U64U7T6;
 				INFOPLIST_FILE = NTAlgorithmSolver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -647,6 +708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5K5U64U7T6;
 				INFOPLIST_FILE = NTAlgorithmSolver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
