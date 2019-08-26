@@ -67,23 +67,16 @@ export class Algorithms extends React.Component {
 				title:'Extended Euclidean Algorithm',
 				screen:'Euclid',
 				image:require('../logos/eea.png')
-			}
-
-			// {
-			// 	title: 'Legendre symbol',
-			// 	image: require('../images/square-root.png'),
-			// 	screen: 'LegendreSymbol'
-			// },
+			},
 		]
 		return (
-
-			<ScrollView>
+			<ScrollView contentContainerStyle={{paddingBottom:50}}>
 				{
 					list.map((item, i) => (
 						<ListItem
 							key={i}
 							title={item.title}
-							titleStyle={{ fontWeight: 'bold' }}
+							titleStyle={{fontFamily:'verdana', fontWeight:"normal" }}
 							subtitle={item.subtitle}
 							leftAvatar={{ source: item.image }}
 							onPress={() => this.props.navigation.navigate(item.screen, {title:item.title} )}

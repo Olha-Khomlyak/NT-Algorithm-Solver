@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Text, TextInput, StyleSheet, Image, ScrollView } from 'react-native'
-import { Input, Button } from 'react-native-elements';
+import { View, Text, TextInput, StyleSheet, ScrollView } from 'react-native'
+import { Input, Button, Image } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 
@@ -12,6 +12,7 @@ export class CRT extends React.Component {
 			title: navigation.getParam('title', 'Some default title'),
 			headerTintColor: '#099a97',
 			headerTitleStyle: { color: 'black' },
+			headerForceInset: { vercical: 'never' },
 		};
 	};
 
@@ -186,91 +187,91 @@ export class CRT extends React.Component {
 					))}
 					<View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
 
-							<Icon.Button
-								name='plus-circle'
-								color='#099a97'
-								size={40}
-								backgroundColor='transparent'
-								iconStyle={{marginRight:0}}
-								onPress={this.handleAddShareholder} />
-							<Icon.Button
-								name='minus-circle'
-								color='#099a97'
-								size={40}
-								backgroundColor='transparent'
-								iconStyle={{marginRight:0}}
-								onPress={this.handleRemoveShareholder(this.state.shareholders.length - 1)} />
+						<Icon.Button
+							name='plus-circle'
+							color='#099a97'
+							size={40}
+							backgroundColor='transparent'
+							iconStyle={{ marginRight: 0 }}
+							onPress={this.handleAddShareholder} />
+						<Icon.Button
+							name='minus-circle'
+							color='#099a97'
+							size={40}
+							backgroundColor='transparent'
+							iconStyle={{ marginRight: 0 }}
+							onPress={this.handleRemoveShareholder(this.state.shareholders.length - 1)} />
 					</View>
 
 
-						<View style={{ flexDirection: "row" }}>
-							<Button
-								title="Apply"
-								type="clear"
-								raised={true}
-								titleStyle={{ fontSize: 15, color: '#099a97' }}
-								containerStyle={{ width: 100 }}
-								buttonStyle={{ borderWidth: 1, borderRadius: 7, marginHorizontal: 10, marginBottom: 10, borderColor: '#099a97' }}
-								onPress={this.CRT}
-							/>
+					<View style={{ flexDirection: "row" }}>
+						<Button
+							title="Apply"
+							type="clear"
+							raised={true}
+							titleStyle={{ fontSize: 15, color: '#099a97' }}
+							containerStyle={{ width: 100 }}
+							buttonStyle={{ borderWidth: 1, borderRadius: 7, marginHorizontal: 10, marginBottom: 10, borderColor: '#099a97' }}
+							onPress={this.CRT}
+						/>
 
-							<Button
-								title="Clear"
-								type="clear"
-								raised={true}
-								titleStyle={{ fontSize: 15, color: '#099a97' }}
-								containerStyle={{ width: 100 }}
-								buttonStyle={{ borderWidth: 1, borderRadius: 7, marginBottom: 10, borderColor: '#099a97' }}
-								onPress={this.cleanFields}
-							/>
+						<Button
+							title="Clear"
+							type="clear"
+							raised={true}
+							titleStyle={{ fontSize: 15, color: '#099a97' }}
+							containerStyle={{ width: 100 }}
+							buttonStyle={{ borderWidth: 1, borderRadius: 7, marginBottom: 10, borderColor: '#099a97' }}
+							onPress={this.cleanFields}
+						/>
 
-						</View>
-						<Text style={styles.titleStyle}>Solution</Text>
-						<View style={{ flexDirection: 'row', paddingVertical: 10, alignItems: 'center' }}>
-							<View style={styles.viewStyle}>
-
-								<Input
-									key='output'
-									editable={false}
-									selectTextOnFocus={false}
-									//placeholder="Euler's Totient"
-									value={this.state.output}
-									inputContainerStyle={{ borderWidth: 1, borderRadius: 7, paddingHorizontal: 7 }}
-								/>
-							</View>
-							<Button
-								title="Copy"
-								type="clear"
-								titleStyle={{ fontSize: 15, color: '#099a97' }}
-								buttonStyle={{ borderWidth: 1, borderRadius: 7, borderColor: '#099a97' }}
-								onPress={this.writeToClipboard}
-							/>
-						</View>
 					</View>
+					<Text style={styles.titleStyle}>Solution</Text>
+					<View style={{ flexDirection: 'row', paddingVertical: 10, alignItems: 'center' }}>
+						<View style={styles.viewStyle}>
+
+							<Input
+								key='output'
+								editable={false}
+								selectTextOnFocus={false}
+								//placeholder="Euler's Totient"
+								value={this.state.output}
+								inputContainerStyle={{ borderWidth: 1, borderRadius: 7, paddingHorizontal: 7 }}
+							/>
+						</View>
+						<Button
+							title="Copy"
+							type="clear"
+							titleStyle={{ fontSize: 15, color: '#099a97' }}
+							buttonStyle={{ borderWidth: 1, borderRadius: 7, borderColor: '#099a97' }}
+							onPress={this.writeToClipboard}
+						/>
+					</View>
+				</View>
 			</ScrollView>
 
 
-				)
-			}
-		}
-		
+		)
+	}
+}
+
 const styles = StyleSheet.create({
-					containerStyle: {
-					flex: 1,
-				justifyContent: 'flex-start',
-				flexDirection: 'column',
-				position: 'relative',
-				padding: 5
-			},
+	containerStyle: {
+		flex: 1,
+		justifyContent: 'flex-start',
+		flexDirection: 'column',
+		position: 'relative',
+		padding: 5
+	},
 	titleStyle: {
-					fontSize: 20,
-				fontWeight: 'bold',
-				marginLeft: 5
-			},
+		fontSize: 20,
+		fontWeight: 'bold',
+		marginLeft: 5
+	},
 	viewStyle: {
-					flex: 1,
-				flexDirection: 'row',
-		
-		
-			}
+		flex: 1,
+		flexDirection: 'row',
+
+
+	}
 });

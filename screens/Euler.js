@@ -10,6 +10,7 @@ export class Euler extends React.Component {
 			title: navigation.getParam('title', 'Some default title'),
 			headerTintColor: '#099a97',
 			headerTitleStyle: { color: 'black' },
+			headerForceInset: {vercical: 'never'},
 		};
 	};
 

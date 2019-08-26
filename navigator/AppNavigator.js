@@ -17,7 +17,7 @@ import {
 	Euler,
 	CRT,
 	Euclid,
-	Calculator,
+
 } from '../screens';
 
 const settingsNavigator = createStackNavigator({
@@ -34,6 +34,7 @@ const settingsNavigator = createStackNavigator({
 	Euler,
 	CRT,
 	Euclid,
+
 	
 });
 

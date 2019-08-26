@@ -63,7 +63,7 @@ export default class Calculator extends Component {
 
 		if(!currentInput) {
 			currentInput = num;
-			const expression = this.state.expression + text;
+			const expression = this.state.expression + num;
 
 			console.log('new expression=>', currentInput);
 			this.setState({ currentInput, expression })
@@ -79,8 +79,8 @@ export default class Calculator extends Component {
 					break;
 				} else {
 					console.log('Dot pressed 1st time!')
-					const currentInput = this.state.currentInput + text;
-					const expression = this.state.expression + text;
+					const currentInput = this.state.currentInput + num;
+					const expression = this.state.expression + num;
 
 					console.log('new expression=>', currentInput);
 					this.setState({ currentInput, expression })
@@ -92,8 +92,8 @@ export default class Calculator extends Component {
 				if (this.state.currentInput === '0') {
 					break;
 				} else {
-					const expression = this.state.expression + text;
-					const currentInput = this.state.currentInput + text;
+					const expression = this.state.expression + num;
+					const currentInput = this.state.currentInput + num;
 
 					console.log('new expression=>', expression);
 					this.setState({ currentInput, expression });
@@ -101,10 +101,10 @@ export default class Calculator extends Component {
 			default:
 				console.log('default case');
 				if (this.state.expression === '0') {
-					this.setState({ expression: text, currentInput: text });
+					this.setState({ expression: num, currentInput: num });
 				} else {
-					const expression = this.state.expression + text;
-					const currentInput = this.state.currentInput + text;
+					const expression = this.state.expression + num;
+					const currentInput = this.state.currentInput + num;
 					console.log('new expression=>', expression);
 					this.setState({ currentInput, expression });
 				}
@@ -116,19 +116,12 @@ export default class Calculator extends Component {
 
 
 
-	operate(op) {
-		const index = this.state.expression.length;
-		this.setState({
-			indexOfOp: this.state.indexOfOp.push(op)
-		})
-		this.setState({ currentInput: '' });
-		switch (op) {
+	operate(operation) {
+	
+		switch (operation) {
 			case 'del':
 				let text = this.state.expression.split('')
-				let dot = text.pop();
-
-				if (dot === '.') this.setState({ isDotPressedBefore: false })
-
+				text.pop()
 				this.setState({
 					expression: text.join('')
 				})
@@ -139,11 +132,12 @@ export default class Calculator extends Component {
 			case '/':
 
 				const lastChar = this.state.expression.split('').pop()
+				console.log('lastchar===>', lastChar)
 				if (this.operations.indexOf(lastChar) > 0) return
 
 				if (this.state.text == "") return
 				this.setState({
-					expression: this.state.expression + operations
+					expression: this.state.expression + operation
 				})
 		}
 
