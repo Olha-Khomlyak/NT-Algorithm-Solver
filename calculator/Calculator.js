@@ -5,16 +5,14 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 Icon.loadFont();
 
 nums = [['7', '8', '9'], ['4', '5', '6'], ['1', '2', '3'], [".", '0', "="]]
-operations = [ '+', '-', '*', '/']
+operations = ['+', '-', '*', '/']
 
 export default class Calculator extends Component {
 	constructor() {
 		super()
 		this.state = {
 			expression: '0',
-			currentInput: '',
 			calculationText: "",
-			isDotPressedBefore: false,
 			clipboardContent: null
 		}
 	}
@@ -29,47 +27,62 @@ export default class Calculator extends Component {
 			calculationText: res
 		})
 	}
+
 	readFromClipboard = async () => {
 		//To get the text from clipboard
 		const clipboardContent = await Clipboard.getString();
 		this.setState({ clipboardContent });
 	};
+
 	writeToClipboard = async () => {
 		//To copy the text to clipboard
-		await Clipboard.setString(this.state.calculationText);
+		await Clipboard.setString(this.state.calculationText+'');
 		console.log('i copy')
 		//alert('Copied to Clipboard!');
 	};
 
 	validate() {
-		const text = this.state.expression
-		switch (text.slice(-1)) {
+		const { expression } = this.state;
+		const len = expression.length;
+		const lastInput = expression[len - 1];
+		console.log('lastInput', lastInput);
+		switch (lastInput) {
 			case '+':
 			case '-':
 			case '*':
 			case '/':
+				console.log('lastInput return false');
 				return false
-
 		}
+		console.log('lastInput return true');
 		return true
+	}
+
+	findLastOp(exp) {
+		for (var i = exp.length; i > 0; i--) {
+			if (exp[i] === '+' || exp[i] === '-' || exp[i] === '*' || exp[i] === '/') {
+				return exp.slice(i + 1);
+			}
+		}
+		return exp;
 	}
 
 	validateInput(num) {
 		console.log('buttonPressed=>', num)
 		console.log('currentstate', this.state.expression);
+
+		if (num === '=') return this.validate() && this.calculateResult();
+
 		const { expression } = this.state;
-		const len = expression.length;
-		let currentInput = len? expression[len-1]: "";
 
-		if(!currentInput) {
-			currentInput = num;
+		// split expression with operators
+		var currentInput = this.findLastOp(expression);
+
+		if (!currentInput) {
 			const expression = this.state.expression + num;
-
-			console.log('new expression=>', currentInput);
-			this.setState({ currentInput, expression })
+			this.setState({ expression })
+			return;
 		}
-
-
 
 		switch (num) {
 			case '.':
@@ -79,34 +92,24 @@ export default class Calculator extends Component {
 					break;
 				} else {
 					console.log('Dot pressed 1st time!')
-					const currentInput = this.state.currentInput + num;
 					const expression = this.state.expression + num;
-
-					console.log('new expression=>', currentInput);
-					this.setState({ currentInput, expression })
+					this.setState({ expression })
 				}
 				break;
-			case '=':
-				return this.validate() && this.calculateResult();
 			case '0':
-				if (this.state.currentInput === '0') {
+				if (this.state.expression === '0' || currentInput === '0') {
 					break;
 				} else {
 					const expression = this.state.expression + num;
-					const currentInput = this.state.currentInput + num;
-
-					console.log('new expression=>', expression);
-					this.setState({ currentInput, expression });
+					this.setState({ expression });
 				}
 			default:
 				console.log('default case');
 				if (this.state.expression === '0') {
-					this.setState({ expression: num, currentInput: num });
+					this.setState({ expression: num });
 				} else {
 					const expression = this.state.expression + num;
-					const currentInput = this.state.currentInput + num;
-					console.log('new expression=>', expression);
-					this.setState({ currentInput, expression });
+					this.setState({ expression });
 				}
 				break;
 
@@ -117,65 +120,39 @@ export default class Calculator extends Component {
 
 
 	operate(operation) {
-	
-		switch (operation) {
-			case 'del':
-				let text = this.state.expression.split('')
-				text.pop()
-				this.setState({
-					expression: text.join('')
-				})
-				break;
-			case '+':
-			case '-':
-			case '*':
-			case '/':
 
-				const lastChar = this.state.expression.split('').pop()
-				console.log('lastchar===>', lastChar)
-				if (this.operations.indexOf(lastChar) > 0) return
+		const lastChar = this.state.expression.split('').pop();
+		console.log('lastchar===>', lastChar)
 
-				if (this.state.text == "") return
-				this.setState({
-					expression: this.state.expression + operation
-				})
-		}
+		if (operations.includes(lastChar)) return;
+
+		if (lastChar === operation) return;
+
+		if (this.state.expression == "") return
+		this.setState({
+			expression: this.state.expression + operation
+		})
+
 
 	}
 
 	DELETE = () => {
-		const { expression, currentInput } = this.state;
-		const lastChar = expression.pop();
-		if(number) {
+		const { expression } = this.state;
+
+		const lastChar = expression[expression.length-1];
+
+		if (expression === '0' || expression.length == 1) {
+			this.setState({ expression: '0' });
+		} else {
 			this.setState({
-				expression,
-				currentInput: currentInput.pop()
+				expression: expression.substr(0, expression.length-1)
 			})
-		 } else {
-				const index = this.state.expression.lastIndexOf(lastChar);
-				this.setState({
-					currentInput: this.state.expression.substring(index)
-				})
-			}
-
-		this.setState({ currentInput: '' });
-	
-		let text = this.state.expression.split('')
-				let dot = text.pop();
-
-				if (dot === '.') this.setState({ isDotPressedBefore: false })
-
-				this.setState({
-					expression: text.join('')
-				})
+		}
 	}
-
-
-
 
 	render() {
 		let rows = []
-	//	let nums = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], [".", '0', "="]]
+		//	let nums = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], [".", '0', "="]]
 
 		for (let i = 0; i < 4; i++) {
 			let row = []
@@ -207,23 +184,23 @@ export default class Calculator extends Component {
 				<View style={styles.calculation}>
 					<Text style={styles.calculationText}>{this.state.calculationText}</Text>
 				</View>
-				<View style={{flexDirection:'row', justifyContent:'space-evenly',backgroundColor:'#099a97', borderBottomWidth:0.5}}>
-						<Button 
-							title="Copy" 
-							buttonStyle={{height:50,width:125,backgroundColor:'#005f5d', borderRadius:0,borderRightWidth:0.5, borderColor:'black'}}
-							onPress={this.writeToClipboard}
-						 />
-						 	<Button 
-						title="Clear" 
-						buttonStyle={{height:50, width:125,backgroundColor:'#005f5d', borderRadius:0,borderRightWidth:0.5, borderColor:'black'}}
-						onPress={() => { this.setState({ expression: '', calculationText: '' }) }}
-						 />
-						 	<Button 
-						title="DEL" 
-						buttonStyle={{height:50, width:125,backgroundColor:'#005f5d', borderRadius:0}}
+				<View style={{ flexDirection: 'row', justifyContent: 'space-evenly', backgroundColor: '#099a97', borderBottomWidth: 0.5 }}>
+					<Button
+						title="Copy"
+						buttonStyle={{ height: 50, width: 125, backgroundColor: '#005f5d', borderRadius: 0, borderRightWidth: 0.5, borderColor: 'black' }}
+						onPress={this.writeToClipboard}
+					/>
+					<Button
+						title="Clear"
+						buttonStyle={{ height: 50, width: 125, backgroundColor: '#005f5d', borderRadius: 0, borderRightWidth: 0.5, borderColor: 'black' }}
+						onPress={() => { this.setState({ expression: '0', calculationText: '' }) }}
+					/>
+					<Button
+						title="DEL"
+						buttonStyle={{ height: 50, width: 125, backgroundColor: '#005f5d', borderRadius: 0 }}
 						onPress={this.DELETE}
-						 />
-						</View>
+					/>
+				</View>
 				<View style={styles.buttons}>
 					<View style={styles.numbers}>
 						{rows}
@@ -246,11 +223,11 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'space-around',
 		alignItems: 'center',
-	
+
 	},
 	bnttext: {
 		fontSize: 30,
-		color:'white',
+		color: 'white',
 
 	},
 	white: {
@@ -261,8 +238,8 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		alignSelf: 'stretch',
 		justifyContent: 'center',
-		borderLeftWidth:0.5,
-		borderBottomWidth:0.5
+		borderLeftWidth: 0.5,
+		borderBottomWidth: 0.5
 	},
 	expression: {
 		fontSize: 30,
@@ -288,7 +265,7 @@ const styles = StyleSheet.create({
 		flex: 6,
 		flexDirection: 'row',
 
-		
+
 	},
 	numbers: {
 		flex: 3,
@@ -299,7 +276,7 @@ const styles = StyleSheet.create({
 		backgroundColor: '#4d5561',
 		alignItems: 'center',
 		justifyContent: "space-around",
-		borderBottomWidth:0.5
+		borderBottomWidth: 0.5
 
 	}
 })

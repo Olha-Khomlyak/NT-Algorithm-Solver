@@ -8,8 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <SafeAreaView style={{flex:1}}>
-        <Calculator />
-        {/* <AppNavigator /> */}
+        <AppNavigator />
       </SafeAreaView>
     )
   }
