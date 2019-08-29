@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Button, Platform, Modal, TouchableOpacity, Text } from 'react-native';
 
 import { Algorithms } from './AlgorithmList';
-import { Icon } from 'react-native-elements';
+import { Icon, Image } from 'react-native-elements';
 import Calculator from '../calculator/Calculator';
 import { SafeAreaView } from 'react-navigation'
 
@@ -21,6 +21,7 @@ export class AlgorithmScreen extends React.Component {
           <SafeAreaView style={{ flex: 1 }}>
           <TouchableOpacity onPress={()=> this.setState({ modalVisible:false })}>
             <View style={{ flexDirection: "row", justifyContent: 'flex-end', borderBottomWidth:0.5, alignItems:'center',marginVertical:15 }}>
+            
             <Icon
                 type='font-awesome'
                 name='arrow-circle-left'

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Clipboard } from 'react-native';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome'
+import { evaluate } from 'mathjs';
+
 Icon.loadFont();
 
 nums = [['7', '8', '9'], ['4', '5', '6'], ['1', '2', '3'], [".", '0', "="]]
@@ -17,12 +19,51 @@ export default class Calculator extends Component {
 		}
 	}
 
+	strip(num) {
+		//var num = (parseFloat(number).toPrecision()(10)) + '';
+		console.log('num:', num);
+		var result = num + '';
+
+		var dotIndex = result.indexOf('.')
+
+		if (dotIndex == -1) {
+			return result;
+		}
+		result = num.toFixed(12) + '';
+
+		console.log('result after toFixed', result);
+
+		var beforeDot = result.slice(0, dotIndex)
+		'beforeDot: ' + beforeDot
+		var afterDot = result.slice(dotIndex)
+		'afterDot: ' + afterDot
+
+		var temp = afterDot.split('');
+
+		for (var i = afterDot.length - 1; i > 0; i--) {
+			if (temp[i] === '0') {
+				temp.pop();
+			} else {
+				break;
+			}
+		}
+
+		afterDot = temp.join('')
+
+		if (afterDot === '.') {
+			return beforeDot;
+		} else {
+			return beforeDot + afterDot;
+		}
+
+	}
+
 	calculateResult() {
 		const text = this.state.expression
-		console.log(text, eval(text))
-		console.log('res==>', text)
-		let res = + eval(text)
-		console.log('result==>', res)
+		//	console.log(text, eval(text))
+		//	console.log('res==>', text)
+		let res = this.strip(eval(text))
+		//		console.log('result==>', res)
 		this.setState({
 			calculationText: res
 		})
@@ -36,7 +77,7 @@ export default class Calculator extends Component {
 
 	writeToClipboard = async () => {
 		//To copy the text to clipboard
-		await Clipboard.setString(this.state.calculationText+'');
+		await Clipboard.setString(this.state.calculationText + '');
 		console.log('i copy')
 		//alert('Copied to Clipboard!');
 	};
@@ -139,13 +180,13 @@ export default class Calculator extends Component {
 	DELETE = () => {
 		const { expression } = this.state;
 
-		const lastChar = expression[expression.length-1];
+		const lastChar = expression[expression.length - 1];
 
 		if (expression === '0' || expression.length == 1) {
 			this.setState({ expression: '0' });
 		} else {
 			this.setState({
-				expression: expression.substr(0, expression.length-1)
+				expression: expression.substr(0, expression.length - 1)
 			})
 		}
 	}
