@@ -225,7 +225,7 @@ export default class Calculator extends Component {
 				<View style={styles.calculation}>
 					<Text style={styles.calculationText}>{this.state.calculationText}</Text>
 				</View>
-				<View style={{ flexDirection: 'row', justifyContent: 'space-evenly', backgroundColor: '#099a97', borderBottomWidth: 0.5 }}>
+				<View style={{ flexDirection: 'row', justifyContent: 'space-evenly', backgroundColor: '#005f5d', borderBottomWidth: 0.5 }}>
 					<Button
 						title="Copy"
 						buttonStyle={{ height: 50, width: 125, backgroundColor: '#005f5d', borderRadius: 0, borderRightWidth: 0.5, borderColor: 'black' }}
