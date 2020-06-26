@@ -1,8 +1,6 @@
 # NT-Algorithm-Solver
 The app contains an helper calculator and instant algorithm solver with following functions:
 
-Number Theory Algorithms Solver:
-
 - Prime factorization
 - Greatest Common Divisor (GCD) of two integers
 - Least Common Multiple (LCM) of two integers
@@ -17,3 +15,8 @@ Number Theory Algorithms Solver:
 
 Availiable at https://play.google.com/store/apps/details?id=com.ntalgorithmsolver&hl=en
 
+<p align="middle">
+  <img src="https://lh3.googleusercontent.com/7tgq2L7ghP2cm4Dh_sZ9v5e8X4GxqywrMdZCJ3mUnHvs24ReUU6RMaFO_a4HS5OE_3Ww=w1440-h711" alt="test image size" height="25%" width="25%" >
+  <img src="https://lh3.googleusercontent.com/-tf-Z2FITcCBOCkcz_3uyU4ufE4O2Popqoy-0F2Z_WLKPtjU-00nVb-n2A2nlIzXY4Y=w1440-h711" alt="test image size" height="25%" width="25%">
+  <img src="https://lh3.googleusercontent.com/5JC83h2CLOfIe6zkYzQNmthUWQR3AVnZZ2BoD5QzPjmH6Z6u6T4oB3aqGCpkHa0z82E=w1440-h711" alt="test image size" height="25%" width="25%">
+</p>
